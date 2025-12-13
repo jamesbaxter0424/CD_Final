@@ -1,0 +1,25 @@
+# --- 安全相關 (絕對不能上傳) ---
+.env
+api_key.txt
+secrets.json
+
+# --- Python 編譯檔與快取 ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- 虛擬環境 (依你的環境名稱) ---
+venv/
+env/
+.venv/
+art_env/
+
+# --- 系統檔案 ---
+.DS_Store
+Thumbs.db
+
+# --- 專案特定暫存檔 ---
+*.log
+temp/
+output/
+

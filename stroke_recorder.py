@@ -127,7 +127,8 @@ class StrokeRecorder:
             'gesture_vector': gesture_vector, 
             'stroke_example': stroke_points,
             'thumbnail': thumb,
-            'texture': texture_surface
+            'texture': texture_surface,
+            'is_new_session': True
         })
         
         json_filename = os.path.join(self.data_dir, f"gesture_{timestamp_id}.json")
@@ -158,7 +159,8 @@ class StrokeRecorder:
                             'gesture_vector': np.array(data['gesture_vector']),
                             'stroke_example': data['stroke_example'],
                             'thumbnail': thumb,
-                            'texture': texture_surf
+                            'texture': texture_surf,
+                            'is_new_session': False
                         })
                 except Exception as e:
                     print(f"❌ Failed to load {filename}: {e}")

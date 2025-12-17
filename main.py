@@ -18,7 +18,10 @@ API_KEY = os.getenv("STABILITY_API_KEY")
 if not API_KEY:
     print("⚠️ WARNING: STABILITY_API_KEY not found in environment variables")
 
-CANVAS_W, CANVAS_H = 1152, 896
+# Get screen dimensions for dynamic sizing
+pygame.init()
+info = pygame.display.Info()
+CANVAS_W, CANVAS_H = int(info.current_w * 0.85), int(info.current_h * 0.85)
 CAM_W, CAM_H = 640, 480
 
 COLOR_BTN = (109, 109, 109)
@@ -38,7 +41,6 @@ current_round = 1
 
 print("Step 2/4: Initializing main canvas window...")
 try:
-    pygame.init()
     screen = pygame.display.set_mode((CANVAS_W, CANVAS_H))
     pygame.display.set_caption("Final Project: Inquiry to CD (Dual Hand Control)")
     clock = pygame.time.Clock()
@@ -473,10 +475,19 @@ try:
                 border_color = COLOR_HIGHLIGHT if gesture['id'] == matched_gesture_id else (200, 200, 200)
                 line_width = 4 if gesture['id'] == matched_gesture_id else 2
                 
-                pygame.draw.rect(screen, (240, 240, 240), bg_rect, border_radius=8)
+                is_new = gesture.get('is_new_session', False)
+                bg_color = (230, 245, 255) if is_new else (240, 240, 240) # Light blue for new, grey for old
+                
+                pygame.draw.rect(screen, bg_color, bg_rect, border_radius=8)
                 pygame.draw.rect(screen, border_color, bg_rect, line_width, border_radius=8)
                 screen.blit(scaled_thumb, (item_x, item_y))
-                id_text = font.render(f"#{i+1}", True, (50, 50, 50))
+                
+                # ID and Tag
+                id_str = f"#{i+1}"
+                if is_new: id_str += " (NEW)"
+                text_color = (0, 100, 200) if is_new else (50, 50, 50)
+                
+                id_text = font.render(id_str, True, text_color)
                 screen.blit(id_text, (item_x, item_y - 20))
 
         if sd_gen.is_generating or current_state == STATE_GENERATING:

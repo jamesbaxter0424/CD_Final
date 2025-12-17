@@ -4,6 +4,8 @@ This is an interactive creation system combining Hand Gesture Drawing and Genera
 
 The project aims to explore the iterative creation process between human hand drawing and AI generation: starting from hand-drawn sketches, AI generates images, and then users "harvest" local textures from the generated images to convert them into new "brushes/stamps" for the next round of creation.
 
+[![Watch the Demo](https://img.youtube.com/vi/sKjc2r9NwXE/maxresdefault.jpg)](https://youtu.be/sKjc2r9NwXE)
+
 ## Core Features
 
 *   Dual Hand Control:

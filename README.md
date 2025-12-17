@@ -24,19 +24,25 @@ The project aims to explore the iterative creation process between human hand dr
 
 1.  Install Dependencies
     
+    ```bash
     pip install -r requirements.txt
+    ```
 
 2.  Setup API Key
     Create a .env file in the project root directory and fill in your Replicate API Token:
     
+    ```env
     REPLICATE_API_TOKEN=your_replicate_api_token_here
+    ```
 
 ## Operation Instructions
 
 ### 1. Launch Program
 Execute main.py:
 
+```bash
 python main.py
+```
 
 ### 2. Hand Control
 The system uses MediaPipe to detect both hands:

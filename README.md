@@ -1,4 +1,4 @@
-# Final Project: Inquiry to CD (Dual Hand Control)
+# A Gesture-Centered Workflow for Human–AI Co-Creation
 
 This is an interactive creation system combining Hand Gesture Drawing and Generative AI (Stable Diffusion).
 
@@ -82,3 +82,4 @@ The system uses MediaPipe to detect both hands:
 
 ---
 Created for Final Project: Inquiry to CD
+

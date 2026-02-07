@@ -1,4 +1,3 @@
-version: "0.1"
 chat:
   auto_reply: true
 reviews:

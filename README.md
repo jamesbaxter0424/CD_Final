@@ -2,7 +2,7 @@
 
 This is an interactive creation system combining Hand Gesture Drawing and Generative AI (Stable Diffusion).
 
-The project aims to explore the iterative creation process between human hand drawing and AI generation: starting from hand-drawn sketches, AI generates images, and then users "harvest" local textures from the generated images to convert them into new "brushes/stamps" for the next round of creation. Trying to find the language between AI and Human.
+The project aims to explore the iterative creation process between human hand drawing and AI generation: starting from hand-drawn sketches, AI generates images, and then users "harvest" local textures from the generated images to convert them into new "brushes/stamps" for the next round of creation. Trying to find the language between AI and Human and the best Interaction way.
 
 [![Watch the Demo](https://img.youtube.com/vi/sKjc2r9NwXE/maxresdefault.jpg)](https://youtu.be/sKjc2r9NwXE)
 
@@ -90,5 +90,6 @@ The system uses MediaPipe to detect both hands:
 
 ---
 Created for Final Project: Inquiry to CD
+
 
 
